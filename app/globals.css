@@ -346,6 +346,18 @@ button {
   text-align: left;
 }
 
+.nav svg,
+.tag-filter svg {
+  flex: 0 0 auto;
+}
+
+.tag-filter span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .nav span,
 .tag-filter small {
   margin-left: auto;
@@ -359,10 +371,6 @@ button {
   background: var(--paper);
   color: var(--ink);
   box-shadow: inset 0 0 0 1.5px var(--line);
-}
-
-.tag-filter {
-  justify-content: space-between;
 }
 
 .project-row {
@@ -788,7 +796,16 @@ button {
   background: rgba(20, 20, 19, 0.18);
 }
 
+.drawer-scrim {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
 .drawer {
+  position: relative;
   width: min(420px, 100vw);
   height: 100%;
   display: grid;
@@ -867,6 +884,8 @@ button {
 .source-panel {
   width: min(1180px, 100%);
   height: min(820px, 92vh);
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-rows: auto 1fr auto;
   border: 1.5px solid var(--line);
